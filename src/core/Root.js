@@ -4,12 +4,12 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import theme from './theme';
-import Homepage from '../components/HomePage'
+import Router from './Router'
 
 const App = () => <Fragment>
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Homepage/>
+        <CssBaseline />
+       <Router/>
     </ThemeProvider>
 </Fragment>;
 
