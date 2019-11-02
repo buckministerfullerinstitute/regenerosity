@@ -1,6 +1,6 @@
-# React Parcel Boilerplate
+# Regenerosity
 
-A [React](https://reactjs.org/) app boilerplate built with [Parcel](https://parceljs.org/).
+Website for Regenerosity project
 
 ## Installation
 
@@ -10,3 +10,5 @@ A [React](https://reactjs.org/) app boilerplate built with [Parcel](https://parc
 
 * Develop: `npm start`
 * Build: `npm build`
+
+Built using [react-parcel-boilerplate](https://github.com/digitaltopo/react-parcel-boilerplate)
