@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {hot} from 'react-hot-loader';
 
-const App = () => <div>
-    Hello World!
-</div>;
+import Homepage from '../components/HomePage'
+
+const App = () => <Fragment>
+    <Homepage/>
+</Fragment>;
 
 export default hot(module)(App);
