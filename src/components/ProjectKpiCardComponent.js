@@ -7,6 +7,10 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 
+
+import { Doughnut } from 'react-chartjs-2';
+
+
 const useStyles = makeStyles({
   card: {
     minWidth: 275,
@@ -22,6 +26,7 @@ const useStyles = makeStyles({
   },
   pos: {
     marginBottom: 12,
+    'text-align': 'center'
   },
 });
 
@@ -34,10 +39,17 @@ export default function ProjectKpiCardComponent(props) {
         <Typography className={classes.title} color="textPrimary" gutterBottom>
           {props.projectKpiEntity.kpiname}
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          Value: {props.projectKpiEntity.kpivalue}
+        <Typography className={classes.pos} color="textPrimary">
+          <h2>{props.projectKpiEntity.kpivalue}</h2>
+        </Typography>
+        <hr/>
+        <Typography className={classes.toltipText} color="textSecondary">
+          {props.projectKpiEntity.tooltip_text}
+        </Typography>
+        <Typography className={classes.sgggoal} color="textSecondary">
+          SDG Goal
           <br/>
-          SDG Goal: {props.projectKpiEntity.sgdgoal}
+          {props.projectKpiEntity.sgdgoal}
         </Typography>
       </CardContent>
       <CardActions>

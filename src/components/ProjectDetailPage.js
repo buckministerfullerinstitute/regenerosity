@@ -17,6 +17,9 @@ const useStyles = makeStyles({
   cardActions: {
     display: 'grid'
   },
+  videoDiv: {
+    'text-align': 'center'
+  },
   button: {
   },
   container: {
@@ -80,10 +83,16 @@ export function ProjectDetailPage(props) {
               Key Performance Indicators
             </Typography>
             <Grid container spacing={3}
-              justify="space-around"
+              
               alignItems="center">
               {projectKpiCardComponents}
             </Grid>
+            <Typography gutterBottom variant="h5" component="h4">
+              <br />
+              Video Pitch
+            </Typography>
+            <div className={classes.videoDiv} dangerouslySetInnerHTML={{ __html: projectEntity.videoembed}}>
+            </div>
           </CardContent>
         </CardActionArea>
         <CardActions className={classes.cardActions}>

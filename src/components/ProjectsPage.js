@@ -26,7 +26,6 @@ const ProjectsPage = () => {
   return <div>
     <Container maxWidth="lg" >
       <h1>Projects Page</h1>
-
       <Grid container spacing={3}>
         {mediaCardsOfProjectEntities}
       </Grid>
