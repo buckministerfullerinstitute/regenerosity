@@ -4,9 +4,9 @@ import { styled } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
-import Link from '@material-ui/core/Link';
+import Link from "@material-ui/core/Link";
 
-import BackgroundImage from '../assets/images/eco-town.jpeg'
+import BackgroundImage from "../assets/images/eco-town.jpeg";
 import LogoImage from "../assets/logo.png";
 import { COLORS } from "../core/theme";
 
@@ -24,15 +24,15 @@ const Subtitle = styled(Typography)({
 
 const Wrapper = styled(Container)({
   minHeight: "90vh",
-  marginBottom: '10vh',
+  marginBottom: "10vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
   backgroundImage: `url(${BackgroundImage})`,
-  backgroundPosition: 'bottom center',
-  backgroundRepeat: 'no-repeat',
-  backgroundColor: 'white'
+  backgroundPosition: "bottom center",
+  backgroundRepeat: "no-repeat",
+  backgroundColor: "white"
 });
 
 const Logo = styled("img")({
@@ -44,7 +44,11 @@ const CtaButton = styled(Button)({
   backgroundColor: COLORS.red,
   fontSize: "2rem",
   color: "white",
-  marginTop: '200px'
+  marginTop: "200px",
+  textDecoration: 'none!important',
+  '&:hover':{
+    backgroundColor: COLORS.green
+  }
 });
 
 const Hero = () => (
@@ -61,8 +65,7 @@ const Hero = () => (
       </Box>
 
     </Box>
-
-    <CtaButton href="/projects" variant="contained">Explore our Community</CtaButton>
+    <Link component={CtaButton} href="/projects" variant="contained">Explore our Community</Link>
   </Wrapper>
 );
 
