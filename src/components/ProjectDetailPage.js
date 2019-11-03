@@ -14,6 +14,11 @@ import { DataService, DEFAULT_OPTIONS } from '../util/DataService';
 import ProjectKpiCardComponent from './ProjectKpiCardComponent';
 
 const useStyles = makeStyles({
+  cardActions: {
+    display: 'grid'
+  },
+  button: {
+  },
   container: {
     paddingTop: 15
   },
@@ -39,7 +44,7 @@ export function ProjectDetailPage(props) {
 
       const newProjectKpiCardComponents = projectEntity.kpis.map((aProjectKpiEntity) => {
         return (
-          <Grid item xs={4}  key={aProjectKpiEntity.id}>
+          <Grid item xs={4} key={aProjectKpiEntity.id}>
             <ProjectKpiCardComponent
               key={aProjectKpiEntity.id}
               projectKpiEntity={aProjectKpiEntity}
@@ -71,7 +76,7 @@ export function ProjectDetailPage(props) {
               {projectEntity.description}
             </Typography>
             <Typography gutterBottom variant="h5" component="h4">
-              <br/>
+              <br />
               Key Performance Indicators
             </Typography>
             <Grid container spacing={3}
@@ -81,10 +86,15 @@ export function ProjectDetailPage(props) {
             </Grid>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
+        <CardActions className={classes.cardActions}>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
             Donate
-        </Button>
+      </Button>
+
         </CardActions>
       </Card>
     </Container>
