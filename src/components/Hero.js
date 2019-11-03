@@ -3,16 +3,22 @@ import Container from "@material-ui/core/Container";
 import { styled } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import LogoImage from '../assets/logo.png';
+import Box from "@material-ui/core/Box";
+
+import LogoImage from "../assets/logo.png";
 import { COLORS } from "../core/theme";
 
 const Title = styled(Typography)({
-  fontFamily: "Mukta Malar, sans-serif",
-  fontSize: "10rem",
-  textTransform: "uppercase",
+  fontFamily: "Montserrat, sans-serif",
+  fontSize: "8rem",
+  fontWeight: "bold",
   color: COLORS.green
 });
-const Subtitle = styled(Typography)({});
+const Subtitle = styled(Typography)({
+  colors: COLORS.dark,
+  fontSize: "1.6rem",
+  marginLeft: "6px"
+});
 
 const Wrapper = styled(Container)({
   minHeight: "100vh",
@@ -22,18 +28,34 @@ const Wrapper = styled(Container)({
   justifyContent: "center"
 });
 
-const Logo = styled('img')({})
+const Logo = styled("img")({
+  width: "200px",
+  marginBottom: "30px"
+});
+
+const CtaButton = styled(Button)({
+  backgroundColor: COLORS.red,
+  fontSize: "2rem",
+  color: "white",
+  marginTop: '200px'
+});
 
 const Hero = () => (
   <Wrapper>
-    <Logo src={LogoImage}/>
-    <Title variant="h1">
-      Regenerosity
-    </Title>
-    <Subtitle paragraph variant="h4">
-      Connection + Capital for Community-led Regenerative Projects.
-    </Subtitle>
-    <Button variant="contained">Explore our Community</Button>
+    <Box display="flex" alignItems="center">
+      <Logo src={LogoImage} />
+      <Box ml={2}>
+        <Title variant="h2">
+          ReGenerosity
+        </Title>
+        <Subtitle paragraph variant="h5">
+          Connection + Capital for Community-led Regenerative Projects.
+        </Subtitle>
+      </Box>
+
+    </Box>
+
+    <CtaButton variant="contained">Explore our Community</CtaButton>
   </Wrapper>
 );
 

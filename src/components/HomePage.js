@@ -15,11 +15,10 @@ import SectionThreeImage from "../assets/images/success.svg";
 import SectionFourImage from "../assets/images/growth.svg";
 
 const Wrapper = styled("div")(({ theme }) => ({
-  backgroundColor: COLORS.yellow,
   minHeight: "100vh",
   maxWidth: "100vw",
   overflowX: "hidden",
-  color: "white"
+  color: COLORS.dark
 }));
 
 const Section = styled(Box)(({ theme }) => ({
@@ -39,19 +38,19 @@ const SectionText = styled(Typography)(({ theme }) => ({
 
 
 const SectionOne = styled(Section)({
-  backgroundColor: COLORS.purple
+  //backgroundColor: COLORS.purple
 });
 
 const SectionTwo = styled(Section)({
-  backgroundColor: COLORS.red
+  //backgroundColor: COLORS.red
 });
 
 const SectionThree = styled(Section)({
-  backgroundColor: COLORS.green
+  //backgroundColor: COLORS.green
 });
 
 const SectionFour = styled(Section)({
-  backgroundColor: COLORS.purple
+ // backgroundColor: COLORS.purple
 });
 
 

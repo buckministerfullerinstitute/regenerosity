@@ -12,7 +12,7 @@ const App = () => <Fragment>
     <GoogleFontLoader
       fonts={[
         {
-          font: 'Mukta Malar',
+          font: 'Montserrat, sans-serif',
           weights: [400],
         },
         {
