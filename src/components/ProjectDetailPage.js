@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Container from '@material-ui/core/Container';
-import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -13,11 +12,14 @@ import Typography from '@material-ui/core/Typography';
 import { DataService, DEFAULT_OPTIONS } from '../util/DataService';
 
 const useStyles = makeStyles({
+  container: {
+    paddingTop: 15
+  },
   card: {
-    maxWidth: 345,
+    // maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 240,
   },
 });
 
@@ -36,7 +38,7 @@ export function ProjectDetailPage(props) {
   }, []);
 
   return <div>
-    <Container maxWidth="lg" >
+    <Container maxWidth="lg" className={classes.container}>
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
@@ -56,9 +58,6 @@ export function ProjectDetailPage(props) {
         <CardActions>
           <Button size="small" color="primary">
             Donate
-        </Button>
-          <Button size="small" color="primary">
-            Learn More
         </Button>
         </CardActions>
       </Card>
