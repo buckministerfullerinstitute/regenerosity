@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import Link from '@material-ui/core/Link';
 
+import BackgroundImage from '../assets/images/eco-town.jpeg'
 import LogoImage from "../assets/logo.png";
 import { COLORS } from "../core/theme";
 
@@ -22,11 +23,16 @@ const Subtitle = styled(Typography)({
 });
 
 const Wrapper = styled(Container)({
-  minHeight: "100vh",
+  minHeight: "90vh",
+  marginBottom: '10vh',
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
+  backgroundImage: `url(${BackgroundImage})`,
+  backgroundPosition: 'bottom center',
+  backgroundRepeat: 'no-repeat',
+  backgroundColor: 'white'
 });
 
 const Logo = styled("img")({

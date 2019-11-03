@@ -18,11 +18,12 @@ const Wrapper = styled("div")(({ theme }) => ({
   minHeight: "100vh",
   maxWidth: "100vw",
   overflowX: "hidden",
-  color: COLORS.dark
+  color: COLORS.dark,
+  backgroundColor: 'white'
 }));
 
 const Section = styled(Box)(({ theme }) => ({
-  minHeight: "70vh",
+  minHeight: "50vh",
   paddingTop: theme.spacing(10),
   paddingBottom: theme.spacing(10),
   "& img": {
@@ -33,7 +34,7 @@ const Section = styled(Box)(({ theme }) => ({
 }));
 
 const SectionText = styled(Typography)(({ theme }) => ({
-  textShadow: '2px 2px rgba(0,0,0,0.5)'
+  //textShadow: '2px 2px rgba(0,0,0,0.5)'
 }));
 
 
@@ -62,7 +63,7 @@ const HomePage = () => {
   return (
     <Wrapper>
       <Hero />
-
+<Container maxWidth="lg">
       <SectionOne>
         <Grid
           container
@@ -81,7 +82,7 @@ const HomePage = () => {
           </Grid>
           <Grid item sm={12} md={6}>
             <Container>
-              <SectionText variant="h3">
+              <SectionText variant="h5">
                 We help nurture the potential of community-led initiatives to regenerate eco-social systems while growing the capacity of donors to enable transformation.
               </SectionText>
             </Container>
@@ -100,7 +101,7 @@ const HomePage = () => {
 
           <Grid item sm={12} md={6}>
             <Container>
-              <SectionText variant="h3">
+              <SectionText variant="h5">
                 As the climate and ecological emergency unravels, projects that aim to restore the health of their ecosystems and communities are emerging all around the world.
               </SectionText>
             </Container>
@@ -134,7 +135,7 @@ const HomePage = () => {
           </Grid>
           <Grid item sm={12} md={6}>
             <Container>
-              <SectionText variant="h3">
+              <SectionText variant="h5">
                 There is need to scale impact and shift capital to unlock the potential of community-led initiatives regenerating eco-social systems and growing the capacity of donors to enable transformation.
               </SectionText>
             </Container>
@@ -153,7 +154,7 @@ const HomePage = () => {
          
           <Grid item sm={12} md={6}>
             <Container>
-              <SectionText variant="h3">
+              <SectionText variant="h5">
                 There is need to scale impact and shift capital to unlock the potential of community-led initiatives regenerating eco-social systems and growing the capacity of donors to enable transformation.
               </SectionText>
             </Container>
@@ -167,7 +168,7 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </SectionFour>
-
+      </Container>
     </Wrapper>
   );
 };
