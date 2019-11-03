@@ -64,8 +64,7 @@ export function ProjectDetailPage(props) {
 
   return <div>
     <Container maxWidth="lg" className={classes.container}>
-      <Card className={classes.card}>
-        <CardActionArea>
+      <Card className={classes.card} >
           <CardMedia
             className={classes.media}
             image={projectEntity.image}
@@ -95,7 +94,6 @@ export function ProjectDetailPage(props) {
             <div className={classes.videoDiv} dangerouslySetInnerHTML={{ __html: projectEntity.videoembed }}>
             </div>
           </CardContent>
-        </CardActionArea>
         <CardActions className={classes.cardActions}>
           <Button
           onClick={()=> window.open("https://support.bfi.org/campaign/support-bfi-today/c201526", "_blank")}
