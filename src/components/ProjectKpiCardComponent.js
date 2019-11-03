@@ -7,10 +7,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 
-
-import { Doughnut } from 'react-chartjs-2';
-
-
 const useStyles = makeStyles({
   card: {
     minWidth: 275,
