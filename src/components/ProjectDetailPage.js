@@ -98,6 +98,7 @@ export function ProjectDetailPage(props) {
         </CardActionArea>
         <CardActions className={classes.cardActions}>
           <Button
+          onClick={()=> window.open("https://support.bfi.org/campaign/support-bfi-today/c201526", "_blank")}
             variant="contained"
             color="primary"
             className={classes.button}>

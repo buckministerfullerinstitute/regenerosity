@@ -44,12 +44,12 @@ export default function ProjectKpiCardComponent(props) {
         </Typography>
         <hr/>
         <Typography className={classes.toltipText} color="textSecondary">
-          {props.projectKpiEntity.tooltip_text}
+          {props.projectKpiEntity.tooltiptext}
         </Typography>
-        <Typography className={classes.sgggoal} color="textSecondary">
+        <Typography className={classes.sdggoal} color="textSecondary">
           SDG Goal
           <br/>
-          {props.projectKpiEntity.sgdgoal}
+          {props.projectKpiEntity.sdggoal}
         </Typography>
       </CardContent>
       <CardActions>
