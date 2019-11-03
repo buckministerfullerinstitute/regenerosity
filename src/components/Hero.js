@@ -27,7 +27,6 @@ const Wrapper = styled(Container)({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: 'lightgray'
 });
 
 const Logo = styled("img")({
@@ -57,7 +56,7 @@ const Hero = () => (
 
     </Box>
 
-    <CtaButton component={Link} href="/projects" variant="contained">Explore our Community</CtaButton>
+    <CtaButton href="/projects" variant="contained">Explore our Community</CtaButton>
   </Wrapper>
 );
 

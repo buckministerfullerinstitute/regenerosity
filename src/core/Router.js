@@ -14,8 +14,8 @@ import { ProjectDetailPage } from "../components/ProjectDetailPage";
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/projects" component={Projects} />
-      <Route path="/project-detail/:id" component={ProjectDetailPage} />
+      <Route exact path="/projects/:id" component={ProjectDetailPage} />
+      <Route exact path="/projects" component={Projects} />
       <Route exact path="/" component={Homepage} />
       <Route path="*" component={NotFound} />
     </Switch>
