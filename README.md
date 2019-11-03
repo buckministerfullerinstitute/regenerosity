@@ -1,9 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/591451bf-14e6-478e-ab78-e2fe6f40fd4e/deploy-status)](https://app.netlify.com/sites/regenerosity/deploys)
+
 # Regenerosity
 
 Website for Regenerosity project
-
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/591451bf-14e6-478e-ab78-e2fe6f40fd4e/deploy-status)](https://app.netlify.com/sites/regenerosity/deploys)
 
 ## Installation
 
