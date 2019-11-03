@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Button from '@material-ui/core/Button';
 
 import { COLORS } from "../core/theme";
 import Hero from "./Hero";
@@ -168,6 +169,11 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </SectionFour>
+      </Container>
+      <Container>
+        <Section justifyContent="center">
+          <Button variant="outlined" href="mailto:regenerosity@bfi.org">Get in Touch!</Button>
+        </Section>
       </Container>
     </Wrapper>
   );
