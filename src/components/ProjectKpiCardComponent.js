@@ -35,17 +35,17 @@ export default function ProjectKpiCardComponent(props) {
         <Typography className={classes.title} color="textPrimary" gutterBottom>
           {props.projectKpiEntity.kpiname}
         </Typography>
-        <Typography className={classes.pos} color="textPrimary">
+        <Typography className={classes.pos} color="textPrimary" variant="h5" component="div">
           <h2>{props.projectKpiEntity.kpivalue}</h2>
         </Typography>
         <hr/>
         <Typography className={classes.toltipText} color="textSecondary">
-          {props.projectKpiEntity.tooltip_text}
+          {props.projectKpiEntity.tooltiptext}
         </Typography>
-        <Typography className={classes.sgggoal} color="textSecondary">
+        <Typography className={classes.sdggoal} color="textSecondary">
           SDG Goal
           <br/>
-          {props.projectKpiEntity.sgdgoal}
+          {props.projectKpiEntity.sdggoal}
         </Typography>
       </CardContent>
       <CardActions>

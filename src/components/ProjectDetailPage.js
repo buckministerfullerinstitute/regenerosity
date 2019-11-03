@@ -83,7 +83,7 @@ export function ProjectDetailPage(props) {
               Key Performance Indicators
             </Typography>
             <Grid container spacing={3}
-              
+
               alignItems="center">
               {projectKpiCardComponents}
             </Grid>
@@ -91,16 +91,17 @@ export function ProjectDetailPage(props) {
               <br />
               Video Pitch
             </Typography>
-            <div className={classes.videoDiv} dangerouslySetInnerHTML={{ __html: projectEntity.videoembed}}>
+            {/* FIXME: Remove the usage of dangerouslySetInnerHTML, it is not safe. */}
+            <div className={classes.videoDiv} dangerouslySetInnerHTML={{ __html: projectEntity.videoembed }}>
             </div>
           </CardContent>
         </CardActionArea>
         <CardActions className={classes.cardActions}>
           <Button
+          onClick={()=> window.open("https://support.bfi.org/campaign/support-bfi-today/c201526", "_blank")}
             variant="contained"
             color="primary"
-            className={classes.button}
-          >
+            className={classes.button}>
             Donate
       </Button>
 
