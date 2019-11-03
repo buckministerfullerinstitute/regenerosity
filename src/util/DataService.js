@@ -15,6 +15,16 @@ export class DataService {
     this.data = null;
   }
 
+  async fetchOrGetProjectById(projectId) {
+    const projectEntities = await this.fetchOrGetProjects();
+    const theProjectEntity = projectEntities.find((aProjectEntity) => aProjectEntity.id === projectId);
+    if (!theProjectEntity) {
+      throw new Error(`DataService could not locate Project entity by ID: ${projectId}`);
+    } else {
+      return theProjectEntity;
+    }
+  }
+
   async fetchOrGetProjects() {
     const { projectJson, projectKpiJson } = await this.fetchOrGetData();
 
