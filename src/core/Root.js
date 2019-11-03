@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React, {Fragment} from 'react';
 import {hot} from 'react-hot-loader';
 import { ThemeProvider } from '@material-ui/core/styles';
