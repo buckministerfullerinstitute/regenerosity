@@ -23,7 +23,7 @@ const Wrapper = styled("div")(({ theme }) => ({
 }));
 
 const Section = styled(Box)(({ theme }) => ({
-  minHeight: "50vh",
+  minHeight: "30vh",
   paddingTop: theme.spacing(10),
   paddingBottom: theme.spacing(10),
   "& img": {
