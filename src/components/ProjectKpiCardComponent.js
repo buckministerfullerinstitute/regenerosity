@@ -41,9 +41,9 @@ export default function ProjectKpiCardComponent(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Tooltip title={props.projectKpiEntity.tooltip_text} placement="top">
+        {/* <Tooltip title={props.projectKpiEntity.tooltip_text} placement="top">
           <Button size="small">Learn More</Button>
-        </Tooltip>
+        </Tooltip> */}
       </CardActions>
     </Card>
   );

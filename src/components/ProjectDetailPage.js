@@ -39,7 +39,7 @@ export function ProjectDetailPage(props) {
 
       const newProjectKpiCardComponents = projectEntity.kpis.map((aProjectKpiEntity) => {
         return (
-          <Grid item xs={4}>
+          <Grid item xs={4}  key={aProjectKpiEntity.id}>
             <ProjectKpiCardComponent
               key={aProjectKpiEntity.id}
               projectKpiEntity={aProjectKpiEntity}

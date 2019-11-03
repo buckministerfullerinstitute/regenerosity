@@ -54,11 +54,17 @@ export class DataService {
           entity[keyPretty] = value.$t;
         });
       return entity;
-    });
+    })
+    // filter out the draft projects (e.g. the ones marked as not visible)
+      .filter((aProjectEntity) => aProjectEntity.visibility !== 'TRUE');
 
     projectKpiEntities
       .forEach((projectKpiEntity) => {
         const projectEntity = projectEntities.find((projectEntity) => projectEntity.id === projectKpiEntity.projectid);
+        if (!projectEntity) {
+          // Could be that the project is not yet visible and therefore it's KPIs will not get associated here either.
+          return;
+        }
         projectEntity.kpis = projectEntity.kpis || [];
         projectEntity.kpis.push(projectKpiEntity);
       });
