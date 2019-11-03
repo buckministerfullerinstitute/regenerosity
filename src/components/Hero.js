@@ -4,6 +4,7 @@ import { styled } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
+import Link from '@material-ui/core/Link';
 
 import LogoImage from "../assets/logo.png";
 import { COLORS } from "../core/theme";
@@ -25,7 +26,8 @@ const Wrapper = styled(Container)({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center"
+  justifyContent: "center",
+  backgroundColor: 'lightgray'
 });
 
 const Logo = styled("img")({
@@ -55,7 +57,7 @@ const Hero = () => (
 
     </Box>
 
-    <CtaButton variant="contained">Explore our Community</CtaButton>
+    <CtaButton component={Link} href="/projects" variant="contained">Explore our Community</CtaButton>
   </Wrapper>
 );
 
