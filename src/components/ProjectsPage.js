@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-import { ProjectCardComponent } from './ProjectCardComponent';
+import ProjectCardComponent from './ProjectCardComponent';
 import { DataService, DEFAULT_OPTIONS } from '../util/DataService';
 
 const ProjectsPage = () => {

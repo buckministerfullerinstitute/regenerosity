@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -17,7 +18,14 @@ const useStyles = makeStyles({
   },
 });
 
-export function ProjectCardComponent(props) {
+const ProjectCardComponent = (props) => {
+
+  const navigateToProjectDetailPage = () => {
+    const path = `/project-detail/${props.projectEntity.id}`;
+    console.log(`Pushing path to navigation history: ${path}`);
+    props.history.push(path);
+  };
+
   const classes = useStyles();
 
   return (
@@ -41,10 +49,12 @@ export function ProjectCardComponent(props) {
         <Button size="small" color="primary">
           Donate
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" onClick={navigateToProjectDetailPage}>
           Learn More
         </Button>
       </CardActions>
     </Card>
   );
-}
+};
+
+export default withRouter(ProjectCardComponent);
