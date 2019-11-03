@@ -53,6 +53,13 @@ export class DataService {
         projectEntity.kpis.push(projectKpiEntity);
       });
 
+    // split tags from CSV to Array<string>, also trim leading, trailing whitespaces
+    projectEntities.forEach((aProjectEntity) => {
+      aProjectEntity.tags = aProjectEntity.tags
+        .split(',')
+        .map((aTag) => aTag.trim());
+    });
+
     window.projectKpiEntities = projectKpiEntities;
     window.projectEntities = projectEntities;
 

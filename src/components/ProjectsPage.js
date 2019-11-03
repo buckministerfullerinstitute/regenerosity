@@ -5,14 +5,12 @@ import { DataService, DEFAULT_OPTIONS } from '../util/DataService';
 const ProjectsPage = () => {
 
   const dataService = new DataService(DEFAULT_OPTIONS);
-  const [projects, setProjects] = useState([]);
+  const [projectEntities, setProjectEntities] = useState([]);
 
-  // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
-    // Update the document title using the browser API
     dataService.fetchOrGetProjects().then((projects) => {
       console.log(`Fetched project list: `, projects);
-      setProjects(projects);
+      setProjectEntities(projects);
     });
   }, []);
 
