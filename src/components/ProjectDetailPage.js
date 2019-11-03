@@ -8,15 +8,17 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 import { DataService, DEFAULT_OPTIONS } from '../util/DataService';
+import ProjectKpiCardComponent from './ProjectKpiCardComponent';
 
 const useStyles = makeStyles({
   container: {
     paddingTop: 15
   },
   card: {
-    // maxWidth: 345,
+    padding: 10
   },
   media: {
     height: 240,
@@ -26,16 +28,31 @@ const useStyles = makeStyles({
 export function ProjectDetailPage(props) {
 
   const dataService = new DataService(DEFAULT_OPTIONS);
-  const [projectEntity, setProjectEntity] = useState([]);
+  const [projectEntity, setProjectEntity] = useState({});
+  const [projectKpiCardComponents, setProjectKpiCardComponents] = useState([]);
 
   const classes = useStyles();
 
   useEffect(() => {
     dataService.fetchOrGetProjectById(props.match.params.id).then((projectEntity) => {
       console.log(`Fetched project entity by id: ${props.projectId}`, projectEntity);
+
+      const newProjectKpiCardComponents = projectEntity.kpis.map((aProjectKpiEntity) => {
+        return (
+          <Grid item xs={4}>
+            <ProjectKpiCardComponent
+              key={aProjectKpiEntity.id}
+              projectKpiEntity={aProjectKpiEntity}
+            ></ProjectKpiCardComponent>
+          </Grid>
+        );
+      });
+
       setProjectEntity(projectEntity);
+      setProjectKpiCardComponents(newProjectKpiCardComponents);
     });
   }, []);
+
 
   return <div>
     <Container maxWidth="lg" className={classes.container}>
@@ -47,12 +64,21 @@ export function ProjectDetailPage(props) {
             title={projectEntity.project}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h3" component="h2">
               {projectEntity.project}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {projectEntity.description}
             </Typography>
+            <Typography gutterBottom variant="h5" component="h4">
+              <br/>
+              Key Performance Indicators
+            </Typography>
+            <Grid container spacing={3}
+              justify="space-around"
+              alignItems="center">
+              {projectKpiCardComponents}
+            </Grid>
           </CardContent>
         </CardActionArea>
         <CardActions>
