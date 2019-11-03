@@ -39,7 +39,7 @@ export default function ProjectKpiCardComponent(props) {
         <Typography className={classes.title} color="textPrimary" gutterBottom>
           {props.projectKpiEntity.kpiname}
         </Typography>
-        <Typography className={classes.pos} color="textPrimary">
+        <Typography className={classes.pos} color="textPrimary" variant="h5" component="div">
           <h2>{props.projectKpiEntity.kpivalue}</h2>
         </Typography>
         <hr/>
